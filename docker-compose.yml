@@ -1,0 +1,9 @@
+services:
+  containers-packer-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: containers-packer-server:latest
+    container_name: containers-packer-server 
+    ports:
+      - "${PORT}:8080"

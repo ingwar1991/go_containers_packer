@@ -1,0 +1,20 @@
+{{define "result.html"}}
+    <div class="card p-3 shadow-sm">
+        <h2>Result</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Container Size</th><th>Count</th></tr>
+            </thead>
+
+            <tbody>
+                {{range $size, $count := .Result}}
+                    <tr>
+                        <td>{{$size}}</td>
+                        <td>{{$count}}</td>
+                    </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+{{end}}
+

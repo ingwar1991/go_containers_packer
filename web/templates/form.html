@@ -1,0 +1,19 @@
+{{define "form.html"}}
+    <form id="packerForm" method="POST" action="/" class="card p-3 shadow-sm">
+        <div class="mb-3">
+            <label for="containerInput" class="form-label">Container size</label>
+            <div class="input-group">
+                <input type="number" id="containerInput" class="form-control" placeholder="Container size (>1)">
+                <button type="button" id="addContainer" class="btn btn-outline-secondary">Add</button>
+            </div>
+            <div id="containerList" class="mt-2"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="goodsInput" class="form-label">Number of goods</label>
+            <input type="number" name="goods" id="goodsInput" class="form-control" placeholder="Goods (>0)">
+        </div>
+
+        <button type="submit" class="btn btn-success">Pack</button>
+    </form>
+{{end}}
